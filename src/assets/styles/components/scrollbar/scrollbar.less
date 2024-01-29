@@ -1,0 +1,34 @@
+/* width */
+::-webkit-scrollbar {
+  width: 4px !important;
+  height: 8px;
+  left: 0;
+  right: auto;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px @main-second-opacity  !important;
+  border-radius: 10px !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: @main-second  !important;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: @main-first  !important;
+}
+
+.overview {
+//   direction: rtl;
+
+  &-wrapper {
+    direction: ltr;
+  }
+  &-scroll {
+    direction: rtl;
+  }
+}

@@ -1,0 +1,154 @@
+.wizard {
+  .mat-horizontal-content-container {
+      padding: 0;
+      overflow: visible;
+  }
+
+  .mat-stepper-horizontal {
+    background-color: transparent;
+  }
+
+  .step {
+    &-image {
+      &-wrapper {
+        display: none;
+      }
+    }
+  }
+
+  .mat-step-icon-selected {
+    .step-image-wrapper {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 48px;
+      height: 48px;
+      background-color: @step-background;
+      border-radius: 100%;
+      animation: grow 150ms;
+      transition: all 150ms ease-in-out;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 58px;
+        height: 58px;
+        background-color: @system-fifth;
+        border-radius: 100%;
+        z-index: -1;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+        width: 64px;
+        height: 64px;
+        background-color: @step-background;
+        border-radius: 100%;
+        z-index: -1;
+      }
+    }
+  }
+
+  .ul {
+    display: flex;
+    gap: 10px;
+  }
+
+  .item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .mat-horizontal-stepper-header-container {
+    margin-bottom: 16px;
+
+    .mat-step-header {
+      .mat-step-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 16px;
+        width: 16px;
+        background-color: @status-success;
+
+        &::before {
+          content: "\e90a";
+          color: @system-fifth;
+          background-color: transparent;
+          font-size: 8px;
+          text-align: center;
+          font-family: 'cn-icons' !important;
+        }
+      }
+
+      &:has(.mat-step-icon-selected) {
+        +.mat-stepper-horizontal-line {
+          background-color: @step-background;
+        }
+
+        .mat-step-icon {
+          background-color: transparent;
+
+          &::before {
+            content: none;
+          }
+        }
+
+        ~.mat-step-header {
+          +.mat-stepper-horizontal-line {
+            background-color: @step-background;
+          }
+
+          .mat-step-icon {
+            background-color: @step-background;
+
+            &::before {
+              content: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mat-step-header {
+
+    &:hover:not([aria-disabled]),
+    &.cdk-keyboard-focused,
+    &.cdk-program-focused,
+    &:hover[aria-disabled=false] {
+      background-color: transparent;
+      border-radius: 100%;
+    }
+
+    .mat-step-header-ripple {
+      top: unset;
+      background-color: transparent;
+    }
+  }
+
+}
+
+@keyframes grow {
+  0% {
+    scale: 0.35;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.mat-horizontal-stepper-header { 
+    pointer-events: none !important; 
+  }

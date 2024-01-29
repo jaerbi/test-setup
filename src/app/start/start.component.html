@@ -1,0 +1,40 @@
+<ng-container *ngIf="isOption; else actionsTemplate">
+  <app-start-option (backClick)="onBack()"
+                    (objectForQuery)="onObjectForQuery($event)"
+                    [type]="selectedType">
+  </app-start-option>
+</ng-container>
+
+<ng-template #actionsTemplate>
+  <div class="wizard_start">
+    <h1 class="wizard_start-title">
+      How can we help you?
+    </h1>
+    <div class="wizard_start-actions">
+      <div class="wizard_start-actions-img"
+           (click)="onSelectQuoteType(type.Move)">
+        <app-image [imgUrl]="'/assets/images/moving-truck.webp'"
+                   [imgAlt]="'boxes'"
+                   [imgClass]="'wizard_start-image'">
+        </app-image>
+        <span class="wizard_start-label">Move</span>
+      </div>
+      <div class="wizard_start-actions-img"
+           (click)="onSelectQuoteType(type.Storage)">
+        <app-image [imgUrl]="'/assets/images/moving-box.webp'"
+                   [imgAlt]="'boxes'"
+                   [imgClass]="'wizard_start-image'">
+        </app-image>
+        <span class="wizard_start-label">Storage</span>
+      </div>
+      <div class="wizard_start-actions-img"
+           (click)="onSelectQuoteType(type.Both)">
+        <app-image [imgUrl]="'/assets/images/boxes.webp'"
+                   [imgAlt]="'boxes'"
+                   [imgClass]="'wizard_start-image'">
+        </app-image>
+        <span class="wizard_start-label">Both</span>
+      </div>
+    </div>
+  </div>
+</ng-template>

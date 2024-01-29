@@ -1,0 +1,29 @@
+<ng-container *ngIf="list.length; else noElementTemplate">
+  <mat-radio-group class="radio_group"
+                   aria-labelledby="radio_group"
+                   [ngModel]="value"
+                   [value]="value"
+                   (ngModelChange)="onValueChange($event)">
+    <ng-container *ngFor="let item of list | onlyAllowedRadio">
+
+      <mat-radio-button class="radio_group-action"
+                        [value]="item">
+        <div class="label">
+          {{ item.label }}
+        </div>
+      </mat-radio-button>
+
+      <ng-container *ngIf="item.description">
+        <p class="description"
+           [innerHtml]="item.description">
+        </p>
+      </ng-container>
+
+    </ng-container>
+  </mat-radio-group>
+
+</ng-container>
+
+<ng-template #noElementTemplate>
+  Element empty
+</ng-template>

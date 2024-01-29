@@ -1,0 +1,62 @@
+.input {
+  cursor: text;
+  padding: 16px;
+  height: 50px;
+  border: 1px solid @disabled-btn;
+  border-radius: 6px;
+  background-color: @system-fifth;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  outline: none;
+
+  &::placeholder {
+    color: @system-third;
+  }
+
+  &:focus-visible {
+    border-color: @main-first;
+  }
+
+  &.ng-invalid.ng-dirty.ng-touched {
+    border-color: @status-error;
+  }
+}
+
+.hidden-wheel-input {
+  height: 0;
+  opacity: 0;
+  position: absolute;
+}
+
+.form-control-feedback,
+.validation-messages {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+  color: @status-error;
+  font-size: 14px;
+  text-align: left;
+  line-height: 1;
+
+  &-mb {
+    margin-bottom: -4px;
+  }
+
+  &-mt {
+    &.form-text {
+      margin-top: 4px;
+    }
+  }
+}
+
+.form-group {
+  position: relative;
+
+  .form-control-feedback {
+    position: absolute;
+    bottom: -17px;
+    font-size: 14px;
+    line-height: 1;
+  }
+}

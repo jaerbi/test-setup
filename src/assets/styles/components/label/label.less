@@ -1,0 +1,53 @@
+.label {
+  cursor: pointer;
+  color: @some-gray-three;
+  font-size: 17px;
+  font-weight: 700;
+
+  .default_style_label {
+    line-height: 1;
+    word-break: break-word;
+  }
+
+  &-black {
+    color: @some-gray-three;
+    font-size: 17px;
+    font-weight: 700;
+    .default_style_label();
+  }
+
+  &-thin {
+    color: @some-gray-three;
+    font-size: 17px;
+    font-weight: 500;
+    .default_style_label();
+  }
+
+  &-info {
+    color: @some-gray-three;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 22px;
+  }
+
+  &-description {
+    color: @system-third;
+    font-size: 17px;
+    font-weight: 300;
+    .default_style_label();
+  }
+
+  &-default {
+    color: @some-gray-three;
+    font-size: 18px;
+    font-weight: 700;
+    .default_style_label();
+  }
+
+  &-grey {
+    color: @system-third;
+    font-size: 17px;
+    font-weight: 600;
+    .default_style_label();
+  }
+}

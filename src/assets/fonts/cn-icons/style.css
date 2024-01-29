@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'cn-icons';
+  src:  url('fonts/cn-icons.eot?12gtug');
+  src:  url('fonts/cn-icons.eot?12gtug#iefix') format('embedded-opentype'),
+    url('fonts/cn-icons.ttf?12gtug') format('truetype'),
+    url('fonts/cn-icons.woff?12gtug') format('woff'),
+    url('fonts/cn-icons.svg?12gtug#cn-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="cn-icon-"], [class*=" cn-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'cn-icons' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.cn-icon-warning-truck:before {
+  content: "\e90c";
+}
+.cn-icon-calendar-solid:before {
+  content: "\e90b";
+}
+.cn-icon-check:before {
+  content: "\e90a";
+}
+.cn-icon-arrow:before {
+  content: "\e900";
+}
+.cn-icon-close:before {
+  content: "\e901";
+}
+.cn-icon-container:before {
+  content: "\e902";
+}
+.cn-icon-copy:before {
+  content: "\e903";
+}
+.cn-icon-done:before {
+  content: "\e904";
+}
+.cn-icon-minus:before {
+  content: "\e905";
+}
+.cn-icon-open:before {
+  content: "\e906";
+}
+.cn-icon-phone:before {
+  content: "\e907";
+}
+.cn-icon-plus:before {
+  content: "\e908";
+}
+.cn-icon-time:before {
+  content: "\e909";
+}
+.cn-icon-delete-button:before {
+  content: "\e91a";
+}
+.cn-icon-forbidden:before {
+  content: "\e927";
+}
+.cn-icon-info:before {
+  content: "\e92e";
+}
+.cn-icon-question:before {
+  content: "\e946";
+}
+.cn-icon-sweet-failed:before {
+  content: "\e956";
+}
+.cn-icon-sweet-success:before {
+  content: "\e957";
+}
+.cn-icon-warning:before {
+  content: "\e963";
+}

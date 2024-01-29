@@ -1,0 +1,62 @@
+.badge {
+  display: inline-block;
+  min-height: 20px;
+  min-width: 20px;
+  height: min-content;
+  color: @system-fifth;
+  font-size: 16px;
+  white-space: nowrap;
+  line-height: 20px;
+  font-weight: 700;
+  text-shadow: 0 0px 1px @some-gray-one;
+  user-select: none;
+
+  i {
+    cursor: pointer;
+    color: @system-fifth;
+    font-size: 16px;
+  }
+
+  &.badge--dark {
+    background-color: @system-first;
+  }
+
+  &.badge--warning {
+    background-color: @status-warning;
+  }
+
+  &.badge--danger {
+    background-color: @status-error;
+  }
+
+  &.badge--dark {
+    background-color: @some-gray-three;
+  }
+
+  &.badge--success {
+    background-color: @status-success;
+  }
+
+  &.badge--primary {
+    background-color: @main-first;
+  }
+
+  &.badge--info {
+    background-color: @main-second;
+  }
+
+  &.badge--wide {
+    letter-spacing: 0.6px;
+    padding: 4px 16px;
+    border-radius: 16px;
+    line-height: 1;
+  }
+
+  &-wrapper {
+    margin: 10px 0 0px 52px;
+  }
+}
+
+app-badge {
+  display: flex;
+}

@@ -1,0 +1,95 @@
+.radio_group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &:has(mat-card) {
+    .mdc-form-field {
+      padding-top: 20px;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+  }
+
+  &-split {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    margin-right: 24px;
+    line-height: 1;
+  }
+
+  &-action {
+    cursor: pointer;
+  }
+
+  .description {
+    padding-left: 24px;
+  }
+
+  .mdc-radio__outer-circle {
+    border-width: 1px;
+  }
+
+  .mdc-radio__native-control:checked+.mdc-radio__background {
+    .mdc-radio__inner-circle {
+      transform: scale(0.7);
+    }
+  }
+
+  .mat-mdc-radio-button {
+    .mdc-radio {
+      padding: 0 8px 0 0;
+
+      .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background,
+      .mdc-radio__native-control:focus:enabled:not(:checked)~.mdc-radio__background,
+      .mdc-radio__native-control:enabled+.mdc-radio__background,
+      .mdc-radio__native-control:enabled:checked+.mdc-radio__background {
+
+        .mdc-radio__outer-circle,
+        .mdc-radio__inner-circle {
+          border-color: @status-success;
+        }
+      }
+
+      &:hover {
+
+        .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background,
+        .mdc-radio__native-control:enabled:checked+.mdc-radio__background {
+          .mdc-radio__outer-circle {
+            border-color: @status-success;
+          }
+        }
+      }
+
+
+      &:not(:disabled):active,
+      &:not(.mdc-ripple-upgraded):focus,
+      &.mdc-ripple-upgraded--background-focused {
+
+        .mdc-radio__native-control:enabled:not(:checked)+.mdc-radio__background,
+        .mdc-radio__native-control:enabled+.mdc-radio__background,
+        .mdc-radio__native-control:enabled:checked+.mdc-radio__background {
+
+          .mdc-radio__inner-circle,
+          .mdc-radio__outer-circle {
+            border-color: @status-success;
+          }
+        }
+      }
+
+      .mdc-radio__background::before {
+        background-color: @status-success;
+      }
+    }
+
+    &.mat-mdc-radio-checked {
+
+      .mdc-radio__background::before,
+      .mat-ripple-element {
+        background-color: @status-success;
+      }
+    }
+  }
+}

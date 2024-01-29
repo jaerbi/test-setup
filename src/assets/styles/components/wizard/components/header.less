@@ -1,0 +1,36 @@
+.wizard_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 34px;
+
+  &-title {
+    color: @main-first;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 18px;
+
+    &-small {
+        margin-top: 6px;
+        font-size: 12px;
+    }
+
+    span {
+        display: flex;
+        flex-direction: column;
+    }
+  }
+
+  &-action {
+    cursor: pointer;
+    color: @status-success;
+    font-size: 24px;
+    transition: all 150ms ease-in-out;
+
+    &:hover {
+        opacity: 0.9;
+        scale: 1.1;
+    }
+  }
+}

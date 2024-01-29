@@ -1,0 +1,207 @@
+.ui_material_date_picker {
+  .mat-calendar {
+    font-size: 16px;
+  }
+
+  .mat-datepicker-input {
+    width: 100%;
+    background-color: transparent;
+  }
+
+  .mat-calendar-table-header {
+    color: @main-second;
+
+    th {
+      padding: 0;
+      font-size: 16px;
+    }
+  }
+
+  .mat-calendar-body-today:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    border-color: @status-success-opacity;
+  }
+
+  .mat-calendar-body-cell:not(.mat-calendar-body-disabled):hover>.mat-calendar-body-cell-content:not(.mat-calendar-body-selected):not(.mat-calendar-body-comparison-identical) {
+    background-color: @status-success-opacity;
+  }
+
+  .mat-calendar-body-cell-content {
+    color: @some-gray-three;
+  }
+
+  .mat-calendar-body-selected {
+    background-color: @status-success-opacity;
+  }
+
+  .mat-calendar-table-header-divider {
+    display: none;
+  }
+
+  .mat-calendar-body-label {
+    padding: 0 !important;
+    height: 0 !important;
+    visibility: hidden;
+  }
+
+  .mat-calendar-content {
+    padding: 0 12px 8px;
+  }
+
+  .mat-calendar-controls {
+    position: relative;
+    justify-content: center;
+
+    .mat-mdc-icon-button.mat-mdc-button-base {
+      height: 30px;
+      width: 30px;
+    }
+
+    .mat-calendar {
+
+      &-spacer {
+        display: none;
+      }
+
+      .date_arrow {
+        content: "\e900";
+        margin: 0;
+        border: 0;
+        color: @status-success;
+        background-color: transparent;
+        font-size: 16px;
+        text-align: center;
+        font-family: 'cn-icons' !important;
+      }
+
+      &-previous-button,
+      &-next-button {
+        position: absolute;
+        margin: 4px;
+        color: @main-first;
+
+        &::after {
+          .date_arrow();
+        }
+
+      }
+
+      &-previous-button {
+        left: 0;
+
+        &::after {
+
+          transform: translateX(-6px) rotate(90deg)
+        }
+      }
+
+      &-next-button {
+        right: 0;
+
+        &::after {
+          transform: translateX(6px) rotate(-90deg)
+        }
+      }
+    }
+
+  }
+
+  .mdc-button__label {
+    svg {
+      display: none;
+    }
+
+    span {
+      display: inline-block;
+      color: @main-first;
+      font-size: 18px;
+      font-weight: 700;
+      text-transform: lowercase;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  --mat-datepicker-calendar-text-size: 16px;
+  --mat-datepicker-calendar-date-focus-state-background-color: @main-second-opacity-20;
+}
+
+.mat-datepicker-content {
+  border-radius: 0;
+  box-shadow: 0 0 10px 0 #aaa;
+
+  .ui_material_date_picker {
+    &.mat-calendar {
+      height: 344px;
+      width: 308px;
+    }
+  }
+}
+
+.ui-date-time-picker {
+  position: relative;
+  color: @some-gray-three;
+
+  i {
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    bottom: 15px;
+    color: @status-success;
+    font-size: 20px;
+    z-index: -1;
+  }
+
+  label {
+    display: initial;
+    margin-bottom: 0;
+  }
+
+  input {
+    cursor: pointer;
+    padding-right: 44px;
+    border-color: @disabled-border;
+
+    &:focus {
+      border-color: @main-first;
+    }
+
+    &::placeholder {
+      color: @system-third;
+    }
+  }
+
+  .disabled {
+    i {
+      cursor: not-allowed;
+      color: @disabled-color;
+    }
+  }
+}
+
+.seven_days_text {
+  position: relative;
+}
+
+.mat-datepicker-content {
+  .ui_material_date_picker.seven_days_text {
+    &.mat-calendar {
+      .mat-calendar-table {
+        &::after {
+          content: 'We’ll deliver your containers on the selected date. Then you’ll have up to 7 days for filling.';
+          position: absolute;
+          left: 20px;
+          bottom: 24px;
+          width: 254px;
+          color: @system-third;
+          font-size: 14px;
+          font-weight: 300;
+        }
+      }
+
+      height: 390px;
+      width: 294px;
+    }
+  }
+}

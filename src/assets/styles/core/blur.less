@@ -1,0 +1,41 @@
+.blur {
+  filter: blur(4px);
+  user-select: none;
+}
+
+
+body {
+  position: relative;
+
+  &:has(.blur) {
+    &::after {
+      content: 'Loading ...';
+      display: block;
+      position: absolute;
+      bottom: 24px;
+      right: 34px;
+      color: @main-first;
+      font-size: 17px;
+      animation: loading-text-opacity 2500ms linear 0s infinite normal;
+      user-select: none;
+    }
+  }
+}
+
+@keyframes loading-text-opacity {
+  0% {
+    opacity: 0
+  }
+
+  20% {
+    opacity: 0
+  }
+
+  50% {
+    opacity: 1
+  }
+
+  100% {
+    opacity: 0
+  }
+}

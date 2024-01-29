@@ -1,0 +1,27 @@
+<div class="ui-date-time-picker ui_material_date_picker">
+  <span *ngIf="isClear && value && !disabled"
+        class="ui-select__action-clear"
+        (click)="onClear()">
+    Clear
+  </span>
+  <input matInput
+         id="picker"
+         class="input shadow-base"
+         [matDatepicker]="picker"
+         [(ngModel)]="value"
+         [min]="minDate"
+         [max]="maxDate"
+         [disabled]="disabled"
+         [placeholder]="placeholder"
+         (dateChange)="onDateChange($event)"
+         (click)="picker.open()"
+         type="text">
+  <label class="requested-icon"
+         for="picker">
+    <i class="cn-icon-calendar-solid"></i>
+  </label>
+
+  <mat-datepicker #picker
+                  [panelClass]="'ui_material_date_picker' + (showInfo ? ' seven_days_text': '')">
+  </mat-datepicker>
+</div>

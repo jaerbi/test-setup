@@ -1,0 +1,74 @@
+.wizard {
+  position: relative;
+
+  &-loading {
+    display: none;
+  }
+
+  &-label {
+    color: @main-first;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1;
+
+    &-success {
+      color: @status-success;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    &-second {
+      color: @main-first;
+      font-size: 17px;
+      font-weight: 700;
+      line-height: 1;
+    }
+  }
+
+  &-hide_form {
+    height: 0;
+    width: 0;
+    overflow: hidden;
+  }
+
+  &-sub_header {
+    color: @main-first;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  &-shedule_done {
+    display: flex;
+    justify-content: center;
+
+    i {
+      margin-top: 20px;
+      color: @main-first;
+      font-size: 64px;
+      text-align: center;
+    }
+
+    &-value {
+      color: @some-gray-three;
+      font-size: 17px;
+      font-weight: 700;
+      text-align: center;
+
+      &-info {
+        color: @status-success;
+      }
+    }
+  }
+
+  .book_button {
+    width: 100%;
+  }
+}
+
+body {
+  * {
+    outline: none;
+  }
+}

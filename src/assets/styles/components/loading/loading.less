@@ -1,0 +1,52 @@
+.loading {
+  height: 32px;
+  width: 32px;
+  background-image: url('../../../images/loading.svg');
+  background-position: bottom;
+  background-repeat: repeat-x;
+  animation: rotate 1s linear infinite;
+
+  &-main {
+    &::after {
+      content: '';
+      position: absolute;
+      top: 48%;
+      left: 48%;
+      height: 32px;
+      width: 32px;
+      background-image: url('../../../images/loading.svg');
+      background-position: bottom;
+      background-repeat: no-repeat;
+      animation: rotate 1s linear infinite;
+      transition: all 350ms ease-in;
+    //   transform: translate(-50%, -50%);
+      z-index: 1050;
+    }
+
+  }
+}
+
+body:has(.loading-main):not(:has(.wizard-loading)) {
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        width: 100%;
+        background-color: @main-loader;
+        z-index: 10;
+      }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+
+  to {
+    rotate: 360deg;
+  }
+}

@@ -1,0 +1,10 @@
+<div class="image-wrapper">
+  <img [class]="imgClass"
+       class="img"
+       onerror="
+         this.onerror=null;
+         this.className='default_img'"
+       loading="lazy"
+       [src]="imgUrl"
+       [alt]="imgAlt" />
+</div>

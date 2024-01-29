@@ -1,0 +1,85 @@
+<div class="d-flex d-column gap-24">
+  <div class="wizard_start-action-wrapper m-b-8">
+    <i class="cn-icon-arrow cn-icon-arrow-left wizard_start-action"
+       (click)="onBack()"></i>
+    <h1 class="wizard_start-title">
+      I need both
+    </h1>
+  </div>
+  <form [formGroup]="startOptionForm"
+        class="d-flex d-column gap-16">
+
+    <div class="d-flex gap-24">
+      <div class="d-flex d-column gap-8">
+        <label class="label-default">
+          Moving from
+        </label>
+        <input class="input shadow-base start-input"
+               type="text"
+               numberOnly
+               [maxlength]="maxZipCode"
+               formControlName="zipFrom"
+               required
+               placeholder="Zip code">
+      </div>
+
+      <div class="d-flex d-column gap-8">
+        <label class="label-default">
+          Moving to
+        </label>
+        <input class="input shadow-base start-input"
+               type="text"
+               numberOnly
+               [maxlength]="maxZipCode"
+               formControlName="zipTo"
+               required
+               placeholder="Zip code">
+      </div>
+    </div>
+
+    <div class="d-flex d-column gap-16">
+      <label class="label-default">
+        Storage site
+      </label>
+      <app-radio-list formControlName="location"
+                      [list]="storageLocation"
+                      required>
+      </app-radio-list>
+    </div>
+
+    <div class="d-flex d-column gap-8">
+      <label class="label-default">
+        Start date
+      </label>
+      <ui-material-date-picker formControlName="date"
+                               [minDate]="minDate"
+                               [showInfo]="true"
+                               required>
+      </ui-material-date-picker>
+    </div>
+
+    <div class="d-flex d-column gap-8">
+      <label class="label-default">
+        Expected storage duration
+      </label>
+      <app-select formControlName="duration"
+                  required
+                  [placeholder]="'Select storage duration'"
+                  [items]="storageDuration">
+      </app-select>
+    </div>
+
+    <div class="d-flex d-column gap-8">
+      <label class="label-default">
+        Coupon code
+      </label>
+      <input class="input shadow-base"
+             type="text"
+             numberLetterDashOnly
+             formControlName="code"
+             [maxlength]="maxPromoCode"
+             placeholder="Enter coupon code">
+    </div>
+  </form>
+
+</div>

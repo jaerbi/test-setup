@@ -1,0 +1,33 @@
+{
+    // The number of spaces a tab is equal to.
+    "editor.tabSize": 4,
+
+    // Insert spaces when pressing Tab.
+    "editor.insertSpaces": true,
+
+    // When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
+    "editor.detectIndentation": false,
+    "[javascript]": {
+        "editor.tabSize": 4
+    },
+    "[typescript]": {
+        "editor.tabSize": 4
+    },
+    "typescript.check.workspaceVersion": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "node_modules": true,
+        "bin": true,
+        "obj": true,
+        "dist": true,
+        "Properties": true,
+        ".vs": true,
+        "*.csproj": true,
+        "*.sln": true,
+        "*.csproj.user": true,
+        "*.suo": true
+    }
+}

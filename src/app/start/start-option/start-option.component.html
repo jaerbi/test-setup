@@ -1,0 +1,21 @@
+<div class="wizard_start_option">
+  <ng-container *ngIf="quoteType.Move === type">
+    <app-start-move (backClick)="onBack()"></app-start-move>
+  </ng-container>
+  <ng-container *ngIf="quoteType.Storage === type">
+    <app-start-storage (backClick)="onBack()"></app-start-storage>
+  </ng-container>
+  <ng-container *ngIf="quoteType.Both === type">
+    <app-start-both (backClick)="onBack()"></app-start-both>
+  </ng-container>
+
+  <button mat-button
+          class="btn btn-main mat-mdc-button w-100 gap-8 m-t-24"
+          [disabled]="!(isValid$ | async)"
+          (click)="start()">
+    <span>
+      Get a quote & book
+    </span>
+    <i class="cn-icon-arrow cn-icon-arrow-right"></i>
+  </button>
+</div>
